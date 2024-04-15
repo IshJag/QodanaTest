@@ -11,7 +11,7 @@ jobs:
     steps:
     - run: echo -n -e "HELLO\n !\n World!" > text.txt
 
-    - uses: IshJag/QodanaTest@master
+    - uses: IshJag/QodanaTest@main
       with:
         unity-version: ${{ matrix.unity-version }}
 
