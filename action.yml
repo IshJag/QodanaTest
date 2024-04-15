@@ -1,6 +1,6 @@
 name: 'Setup Unity Editor for use with actions'
 description: 'This action sets up an Unity Editor for use in actions'
-author: 'pCYSl5EDgo'
+author: 'IshaJag'
 inputs:
   unity-version:
     description: 'Unity version'
