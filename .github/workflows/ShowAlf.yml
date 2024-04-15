@@ -1,0 +1,19 @@
+name: Show alf
+
+on: push
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        unity-version: [2022.3.19f1]
+    steps:
+    - run: echo -n -e "HELLO\n !\n World!" > text.txt
+
+    - uses: IshJag/QodanaTest@master
+      with:
+        unity-version: ${{ matrix.unity-version }}
+
+    - run: /opt/Unity/Editor/Unity -quit -batchMode -logFile -noGraphics -createManualActivationFile || exit 0
+    - run: cat Unity_v${{ matrix.unity-version }}.alf
