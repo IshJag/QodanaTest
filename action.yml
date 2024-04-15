@@ -1,0 +1,37 @@
+name: 'Setup Unity Editor for use with actions'
+description: 'This action sets up an Unity Editor for use in actions'
+author: 'pCYSl5EDgo'
+inputs:
+  unity-version:
+    description: 'Unity version'
+    required: true
+  enable-cache:
+    description: 'enable cache(only linux) true/false(Default)'
+    required: false
+  install-dependencies:
+    description: 'install dependencies(only linux) true(Default)/false'
+    require: false
+  has-webgl:
+    description: 'install webgl component true/false(Default)'
+    require: false
+  has-android:
+    description: 'install android component true/false(Default)'
+    require: false
+  has-il2cpp:
+    description: 'install il2cpp component true/false(Default)'
+    require: false
+  has-ios:
+    description: 'install ios component true/false(Default)'
+    require: false
+  has-mac-mono:
+    description: 'install Mac Mono component true/false(Default)'
+    require: false
+  has-windows-mono:
+    description: 'install Windows Mono component true/false(Default)'
+    require: false
+outputs:
+  id:
+    description: 'id'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
